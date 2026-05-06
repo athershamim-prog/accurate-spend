@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accurate Spend — Federal Aggregate Spend Reporting Solution</title>
+  <meta name="description" content="Accurate Spend: affordable, expert-managed CMS Open Payments and federal aggregate spend reporting for pharmaceutical manufacturers. Upload any format, dedicated consultants, full-cycle support." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#1a3363', dark: '#0d1f3c', light: '#244a8a' },
+            teal:  { DEFAULT: '#00a896', dark: '#007f71', light: '#e6f7f6' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+
+        <a href="index.html" class="flex items-center gap-2.5 text-white no-underline">
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+            <i class="fa-solid fa-chart-line text-white text-base"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">
+            Accurate<span style="color: #00a896;">Spend</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="index.html">Home</a>
+          <div class="relative">
+            <button id="solutions-trigger" class="nav-link active flex items-center gap-1.5 bg-transparent border-0 cursor-pointer">
+              Solutions <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            </button>
+            <div id="solutions-dropdown" class="dropdown-menu">
+              <a href="solutions-accurate-spend.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-file-chart-column"></i></div>
+                <div class="item-text">
+                  <strong>Accurate Spend</strong>
+                  <span>Federal Aggregate Spend Reporting</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="index.html#services"   class="nav-link">Services</a>
+          <a href="index.html#expertise"  class="nav-link">Expertise</a>
+          <a href="index.html#about"      class="nav-link">About</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+            <i class="fa-solid fa-calendar-check"></i> Book a Demo
+          </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white text-xl p-2">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html"                    class="mobile-nav-link">Home</a>
+      <a href="solutions-accurate-spend.html" class="mobile-nav-link">Solutions — Accurate Spend</a>
+      <a href="index.html#services"           class="mobile-nav-link">Services</a>
+      <a href="index.html#expertise"          class="mobile-nav-link">Expertise</a>
+      <a href="index.html#about"              class="mobile-nav-link">About</a>
+      <a href="contact.html"                  class="mobile-nav-link">Contact</a>
+      <div class="pt-3">
+        <a href="contact.html" class="btn-primary w-full justify-center">
+          <i class="fa-solid fa-calendar-check"></i> Book a Demo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero-bg pt-32 pb-20">
+    <div class="hero-glow"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8" aria-label="breadcrumb">
+        <ol class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+          <li><a href="#" class="hover:text-white transition-colors">Solutions</a></li>
+          <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+          <li style="color: #4dd6c8;">Accurate Spend</li>
+        </ol>
+      </nav>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="badge mb-5">
+            <i class="fa-solid fa-file-chart-column"></i>
+            Federal Aggregate Spend Reporting
+          </div>
+          <h1 class="text-white font-black leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+            CMS Open Payments Compliance —<br/>
+            <span style="color: #00a896;">Without the Complexity</span>
+          </h1>
+          <p class="mb-8" style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.75; max-width: 520px;">
+            Accurate Spend is a fully managed federal reporting solution for pharma manufacturers. Upload your spend data in any format, and our expert consultants handle everything through to CMS submission — at a price point that's unmatched in the market.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn-primary">
+              <i class="fa-solid fa-calendar-check"></i> Book a Free Demo
+            </a>
+            <a href="#how-it-works" class="btn-outline">
+              How It Works <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Stats Panel -->
+        <div class="rounded-2xl p-8" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); backdrop-filter: blur(10px);">
+          <p class="text-white font-bold text-lg mb-6">Why Teams Choose Accurate Spend</p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-check" style="color: #00a896; font-size: 0.75rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Significantly lower cost than MediSpend or Alanda</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-check" style="color: #00a896; font-size: 0.75rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Any data format accepted — no reformatting required</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-check" style="color: #00a896; font-size: 0.75rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Dedicated compliance consultants on every engagement</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-check" style="color: #00a896; font-size: 0.75rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">10+ years of Sunshine Act &amp; Open Payments expertise</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-check" style="color: #00a896; font-size: 0.75rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Full-cycle: data collection through dispute resolution</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-check" style="color: #00a896; font-size: 0.75rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Federal only — focused, specialized, no scope creep</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHAT IS AGGREGATE SPEND
+  ══════════════════════════════════════ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="section-tag mb-4"><i class="fa-solid fa-book-open"></i> Background</div>
+          <h2 class="section-heading mb-5">
+            What Is <span>Aggregate Spend Reporting?</span>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Under the <strong>Physician Payments Sunshine Act</strong> (Section 6002 of the ACA), pharmaceutical and medical device manufacturers must report all transfers of value to covered healthcare professionals (HCPs) and teaching hospitals to the Centers for Medicare &amp; Medicaid Services (CMS) each year.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            This data is published publicly in the <strong>Open Payments</strong> database — making accuracy, completeness, and timely submission critical to your organization's compliance standing and reputation.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Reportable payments include: meals, speaker program fees, consulting fees, travel and lodging, education, research, royalties, and ownership interests — across every product line and business unit.
+          </p>
+          <div class="rounded-xl p-5" style="background: #fff3cd; border-left: 4px solid #f59e0b;">
+            <p class="font-semibold text-sm mb-1" style="color: #92400e;">
+              <i class="fa-solid fa-triangle-exclamation mr-2"></i>Penalty Reminder
+            </p>
+            <p class="text-sm" style="color: #78350f;">
+              Civil monetary penalties for non-reporting range from $1,000 to $10,000 per unreported payment — up to a maximum of <strong>$1.18 million per year</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- What must be reported -->
+        <div class="rounded-2xl p-8" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+          <p class="font-bold mb-5" style="color: #1a3363;">Reportable Payment Categories</p>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-utensils" style="color: #00a896; font-size: 0.85rem;"></i> Meals &amp; Entertainment
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-microphone" style="color: #00a896; font-size: 0.85rem;"></i> Speaker Program Fees
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-handshake" style="color: #00a896; font-size: 0.85rem;"></i> Consulting Fees
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-plane" style="color: #00a896; font-size: 0.85rem;"></i> Travel &amp; Lodging
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-flask" style="color: #00a896; font-size: 0.85rem;"></i> Research Grants
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-graduation-cap" style="color: #00a896; font-size: 0.85rem;"></i> Education &amp; CME
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-gift" style="color: #00a896; font-size: 0.85rem;"></i> Gifts &amp; Entertainment
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-chart-pie" style="color: #00a896; font-size: 0.85rem;"></i> Ownership Interests
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-copyright" style="color: #00a896; font-size: 0.85rem;"></i> Royalties &amp; Licenses
+            </div>
+            <div class="flex items-center gap-2 text-sm" style="color: #374151;">
+              <i class="fa-solid fa-plus" style="color: #00a896; font-size: 0.85rem;"></i> And More...
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t" style="border-color: #e2e8f0;">
+            <p class="font-semibold text-sm mb-3" style="color: #1a3363;">Covered Recipients</p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-sm text-gray-600">
+                <i class="fa-solid fa-user-doctor" style="color: #00a896;"></i>
+                Physicians &amp; Dentists
+              </div>
+              <div class="flex items-center gap-2 text-sm text-gray-600">
+                <i class="fa-solid fa-hospital" style="color: #00a896;"></i>
+                Teaching Hospitals
+              </div>
+              <div class="flex items-center gap-2 text-sm text-gray-600">
+                <i class="fa-solid fa-user-nurse" style="color: #00a896;"></i>
+                Physician Assistants, NPs, CRNAs &amp; CNMs
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HOW IT WORKS — 6 PHASES
+  ══════════════════════════════════════ -->
+  <section id="how-it-works" class="py-20" style="background: #f8fafc;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-gears"></i> How It Works</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          Our <span>Reporting Process</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          A proven six-phase approach that takes your raw spend data all the way through to a validated, CMS-accepted Open Payments submission.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background: #1a3363;">1</div>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #e6f7f6;">
+              <i class="fa-solid fa-database" style="color: #00a896;"></i>
+            </div>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Data Collection &amp; Upload</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Your team submits spend data in whatever format it exists — spreadsheets, ERP exports, SAP/Oracle extracts, CRM reports, or manual files. No template required; we work with what you have.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background: #1a3363;">2</div>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #e6f7f6;">
+              <i class="fa-solid fa-map" style="color: #00a896;"></i>
+            </div>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Data Mapping &amp; Standardization</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Our team maps your source data fields to the CMS Open Payments schema — applying standard payment categories, nature of payment codes, and recipient classification rules.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background: #1a3363;">3</div>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #e6f7f6;">
+              <i class="fa-solid fa-magnifying-glass-check" style="color: #00a896;"></i>
+            </div>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Validation &amp; Cleansing</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Automated validation checks identify duplicate records, missing NPI numbers, incorrect thresholds, and HCP matching issues — followed by expert review to resolve all exceptions.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background: #1a3363;">4</div>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #e6f7f6;">
+              <i class="fa-solid fa-user-check" style="color: #00a896;"></i>
+            </div>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Expert Review &amp; Sign-Off</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Your dedicated compliance consultant reviews the final dataset with your team — confirming accuracy, completeness, and compliance before any submission is made.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background: #1a3363;">5</div>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #e6f7f6;">
+              <i class="fa-solid fa-paper-plane" style="color: #00a896;"></i>
+            </div>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">CMS Open Payments Submission</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            We prepare the finalized submission file and support the upload to the CMS Open Payments system — managing any technical rejections or system errors through to acceptance.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style="background: #00a896;">6</div>
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: #e6f7f6;">
+              <i class="fa-solid fa-comments" style="color: #00a896;"></i>
+            </div>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Post-Filing &amp; Dispute Support</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            After submission, we manage the Open Payments dispute window — responding to HCP inquiries, processing correction requests, and maintaining your compliance record through the annual review cycle.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       KEY FEATURES
+  ══════════════════════════════════════ -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-sparkles"></i> Key Features</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          Everything You Need. <span>Nothing You Don't.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #e6f7f6;">
+            <i class="fa-solid fa-file-import" style="color: #00a896;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">Any-Format Data Ingestion</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Accept data from any source system in any file format. We handle transformation, so your team has zero rework burden.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #ede9fe;">
+            <i class="fa-solid fa-user-doctor" style="color: #7c3aed;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">HCP/HCO NPI Matching</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Accurate matching of healthcare professionals to NPPES records ensures every payment is attributed to the correct covered recipient.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #fff3e0;">
+            <i class="fa-solid fa-circle-check" style="color: #f59e0b;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">CMS Rule &amp; Threshold Validation</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Built-in checks for payment thresholds ($10 de minimis, $100 aggregate), nature of payment codes, and CMS technical file requirements.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #ecfdf5;">
+            <i class="fa-solid fa-copy" style="color: #059669;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">Duplicate Detection &amp; Resolution</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Automated identification of duplicate records across multiple source systems — with expert-guided resolution to protect report integrity.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #fef3f2;">
+            <i class="fa-solid fa-calendar-check" style="color: #dc2626;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">Deadline-Driven Workflow</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Structured calendar of monthly uploads, quarterly reviews, and annual CMS submission activities — so nothing falls through the cracks.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #eff6ff;">
+            <i class="fa-solid fa-scale-balanced" style="color: #2563eb;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">Dispute &amp; Correction Management</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Full management of the 45-day HCP dispute review window — including responses, corrections, and re-submissions as needed.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #f0fdf4;">
+            <i class="fa-solid fa-shield-halved" style="color: #16a34a;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">Audit-Ready Documentation</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Complete documentation trail of data sources, transformations, validations, and submission records — ready for internal audits or regulatory inquiries.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #f5f3ff;">
+            <i class="fa-solid fa-people-group" style="color: #6d28d9;"></i>
+          </div>
+          <div>
+            <h4 class="font-bold mb-1" style="color: #1a3363;">Named Consultant Model</h4>
+            <p class="text-gray-500 text-sm leading-relaxed">Every client is assigned a dedicated compliance consultant — your direct point of contact, not a shared support queue.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       COMPARISON
+  ══════════════════════════════════════ -->
+  <section class="py-20" style="background: #f0f6ff;">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-scale-balanced"></i> How We Compare</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          Accurate Spend vs. <span>The Competition</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          See how Accurate Spend stacks up against enterprise platforms like MediSpend and Alanda.
+        </p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-lg" style="border: 1px solid #e2e8f0;">
+        <table class="w-full text-sm">
+          <thead>
+            <tr style="background: #1a3363; color: #fff;">
+              <th class="text-left p-4 font-semibold">Feature</th>
+              <th class="text-center p-4 font-semibold" style="background: #007f71;">Accurate Spend</th>
+              <th class="text-center p-4 font-semibold opacity-80">MediSpend / Alanda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: #fff; border-bottom: 1px solid #f1f5f9;">
+              <td class="p-4 font-medium text-gray-700">Pricing</td>
+              <td class="p-4 text-center font-bold" style="color: #007f71; background: #f0fdf4;">Affordable — fraction of competitors</td>
+              <td class="p-4 text-center text-gray-500">High enterprise licensing fees</td>
+            </tr>
+            <tr style="background: #f8fafc; border-bottom: 1px solid #f1f5f9;">
+              <td class="p-4 font-medium text-gray-700">Data Format</td>
+              <td class="p-4 text-center font-bold" style="color: #007f71; background: #f0fdf4;">Any format accepted</td>
+              <td class="p-4 text-center text-gray-500">Often requires specific templates</td>
+            </tr>
+            <tr style="background: #fff; border-bottom: 1px solid #f1f5f9;">
+              <td class="p-4 font-medium text-gray-700">Support Model</td>
+              <td class="p-4 text-center font-bold" style="color: #007f71; background: #f0fdf4;">Dedicated named consultant</td>
+              <td class="p-4 text-center text-gray-500">Shared helpdesk / ticketing</td>
+            </tr>
+            <tr style="background: #f8fafc; border-bottom: 1px solid #f1f5f9;">
+              <td class="p-4 font-medium text-gray-700">Federal Reporting</td>
+              <td class="p-4 text-center" style="color: #007f71; background: #f0fdf4;"><i class="fa-solid fa-circle-check text-lg"></i></td>
+              <td class="p-4 text-center text-gray-400"><i class="fa-solid fa-circle-check text-lg"></i></td>
+            </tr>
+            <tr style="background: #fff; border-bottom: 1px solid #f1f5f9;">
+              <td class="p-4 font-medium text-gray-700">Dispute Management</td>
+              <td class="p-4 text-center" style="color: #007f71; background: #f0fdf4;"><i class="fa-solid fa-circle-check text-lg"></i></td>
+              <td class="p-4 text-center text-gray-400"><i class="fa-solid fa-circle-check text-lg"></i></td>
+            </tr>
+            <tr style="background: #f8fafc; border-bottom: 1px solid #f1f5f9;">
+              <td class="p-4 font-medium text-gray-700">Consultative Approach</td>
+              <td class="p-4 text-center font-bold" style="color: #007f71; background: #f0fdf4;"><i class="fa-solid fa-circle-check text-lg"></i></td>
+              <td class="p-4 text-center text-gray-400"><i class="fa-solid fa-circle-xmark text-lg text-red-400"></i></td>
+            </tr>
+            <tr style="background: #fff;">
+              <td class="p-4 font-medium text-gray-700">Time to Onboard</td>
+              <td class="p-4 text-center font-bold" style="color: #007f71; background: #f0fdf4;">Days, not months</td>
+              <td class="p-4 text-center text-gray-500">Weeks to months of implementation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHO IT'S FOR
+  ══════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h3 class="font-bold text-xl mb-2" style="color: #1a3363;">Who Accurate Spend Is Built For</h3>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-xl p-6 text-center" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background: #1a3363;">
+            <i class="fa-solid fa-capsules text-white text-xl"></i>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Pharmaceutical Manufacturers</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">Any company manufacturing drugs, biologics, or combination products covered under Medicare, Medicaid, or CHIP programs.</p>
+        </div>
+        <div class="rounded-xl p-6 text-center" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background: #1a3363;">
+            <i class="fa-solid fa-stethoscope text-white text-xl"></i>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Medical Device Companies</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">Device manufacturers with covered products who engage in commercial interactions — speaker programs, consulting, research — with HCPs.</p>
+        </div>
+        <div class="rounded-xl p-6 text-center" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background: #1a3363;">
+            <i class="fa-solid fa-building-columns text-white text-xl"></i>
+          </div>
+          <h4 class="font-bold mb-2" style="color: #1a3363;">Group Purchase Organizations</h4>
+          <p class="text-gray-500 text-sm leading-relaxed">GPOs required to report ownership and investment interest held by physicians or their immediate family members.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════ -->
+  <section class="cta-banner py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-white font-black mb-4" style="font-size: clamp(1.8rem, 4vw, 2.75rem);">
+        See Accurate Spend in Action
+      </h2>
+      <p class="text-lg mb-10" style="color: rgba(255,255,255,0.8);">
+        Book a free 30-minute demo tailored to your organization's reporting needs — no commitment, no sales pitch, just a candid look at the solution.
+      </p>
+      <a href="contact.html" class="btn-primary text-base">
+        <i class="fa-solid fa-calendar-check"></i> Book My Free Demo
+      </a>
+      <p class="mt-6 text-sm" style="color: rgba(255,255,255,0.5);">
+        30-minute session &nbsp;·&nbsp; Expert Q&amp;A &nbsp;·&nbsp; No obligation
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+              <i class="fa-solid fa-chart-line text-white text-base"></i>
+            </div>
+            <span class="text-xl font-bold text-white tracking-tight">Accurate<span style="color: #00a896;">Spend</span></span>
+          </a>
+          <p style="color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.7; max-width: 320px;">
+            Expert-led federal aggregate spend reporting for pharmaceutical manufacturers — compliant, affordable, and fully managed.
+          </p>
+          <div class="mt-5">
+            <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+              <i class="fa-solid fa-calendar-check"></i> Book a Demo
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Solutions</p>
+          <a href="solutions-accurate-spend.html" class="footer-link">Accurate Spend</a>
+          <a href="#how-it-works" class="footer-link">How It Works</a>
+          <a href="#features" class="footer-link">Features</a>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Company</p>
+          <a href="index.html#services"   class="footer-link">Services</a>
+          <a href="index.html#expertise"  class="footer-link">Expertise</a>
+          <a href="index.html#about"      class="footer-link">About</a>
+          <a href="contact.html"          class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="border-t pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style="border-color: rgba(255,255,255,0.1);">
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">&copy; 2025 Accurate Spend. All rights reserved.</p>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">Federal CMS Open Payments Reporting &nbsp;·&nbsp; Sunshine Act Compliance</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

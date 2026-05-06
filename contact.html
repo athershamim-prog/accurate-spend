@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Demo | Accurate Spend</title>
+  <meta name="description" content="Book a free 30-minute demo of Accurate Spend — expert-led CMS Open Payments and federal aggregate spend reporting for pharma manufacturers." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#1a3363', dark: '#0d1f3c', light: '#244a8a' },
+            teal:  { DEFAULT: '#00a896', dark: '#007f71', light: '#e6f7f6' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+
+        <a href="index.html" class="flex items-center gap-2.5 text-white no-underline">
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+            <i class="fa-solid fa-chart-line text-white text-base"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">
+            Accurate<span style="color: #00a896;">Spend</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="relative">
+            <button id="solutions-trigger" class="nav-link flex items-center gap-1.5 bg-transparent border-0 cursor-pointer">
+              Solutions <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            </button>
+            <div id="solutions-dropdown" class="dropdown-menu">
+              <a href="solutions-accurate-spend.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-file-chart-column"></i></div>
+                <div class="item-text">
+                  <strong>Accurate Spend</strong>
+                  <span>Federal Aggregate Spend Reporting</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="index.html#services"  class="nav-link">Services</a>
+          <a href="index.html#expertise" class="nav-link">Expertise</a>
+          <a href="index.html#about"     class="nav-link">About</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="contact.html" class="nav-link active">Contact</a>
+          <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+            <i class="fa-solid fa-calendar-check"></i> Book a Demo
+          </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white text-xl p-2">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html"                    class="mobile-nav-link">Home</a>
+      <a href="solutions-accurate-spend.html" class="mobile-nav-link">Solutions — Accurate Spend</a>
+      <a href="index.html#services"           class="mobile-nav-link">Services</a>
+      <a href="index.html#expertise"          class="mobile-nav-link">Expertise</a>
+      <a href="index.html#about"              class="mobile-nav-link">About</a>
+      <a href="contact.html"                  class="mobile-nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero-bg pt-32 pb-16">
+    <div class="hero-glow"></div>
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <div class="badge mb-5 justify-center">
+        <i class="fa-solid fa-calendar-check"></i> Free Demo Session
+      </div>
+      <h1 class="text-white font-black mb-4" style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2;">
+        See Accurate Spend<br/><span style="color: #00a896;">In Action</span>
+      </h1>
+      <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.75;">
+        Book a free 30-minute tailored demo with one of our compliance experts — no commitment, no pressure. Just a candid look at how Accurate Spend can simplify your federal aggregate spend reporting.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FORM + SIDEBAR
+  ══════════════════════════════════════ -->
+  <section class="py-20" style="background: #f0f6ff;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-5 gap-10">
+
+        <!-- Form — wider column -->
+        <div class="md:col-span-3">
+          <div class="bg-white rounded-2xl shadow-sm p-8" style="border: 1px solid #e2e8f0;">
+            <h2 class="font-bold text-xl mb-1" style="color: #1a3363;">Request Your Free Demo</h2>
+            <p class="text-gray-500 text-sm mb-7">Fill in your details and we'll be in touch within one business day to schedule your session.</p>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="form-success" class="hidden rounded-xl p-5 mb-6" style="background: #ecfdf5; border: 1px solid #6ee7b7;">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-green-500 text-xl"></i>
+                <div>
+                  <p class="font-bold text-green-800">Request submitted!</p>
+                  <p class="text-green-700 text-sm">Thank you — our team will reach out within one business day to schedule your demo.</p>
+                </div>
+              </div>
+            </div>
+
+            <form id="demo-form" class="space-y-5" novalidate>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label for="first-name">First Name <span class="text-red-500">*</span></label>
+                  <input type="text" id="first-name" name="first-name" placeholder="Jane" required />
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last Name <span class="text-red-500">*</span></label>
+                  <input type="text" id="last-name" name="last-name" placeholder="Smith" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Work Email <span class="text-red-500">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jane.smith@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company Name <span class="text-red-500">*</span></label>
+                <input type="text" id="company" name="company" placeholder="Acme Pharmaceuticals Inc." required />
+              </div>
+
+              <div class="form-group">
+                <label for="company-type">Company Type <span class="text-red-500">*</span></label>
+                <select id="company-type" name="company-type" required>
+                  <option value="" disabled selected>Select your organization type</option>
+                  <option>Pharmaceutical Manufacturer</option>
+                  <option>Medical Device Company</option>
+                  <option>Biotech / Specialty Pharma</option>
+                  <option>Group Purchase Organization (GPO)</option>
+                  <option>Contract Research Organization</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="role">Your Role</label>
+                <select id="role" name="role">
+                  <option value="" disabled selected>Select your role</option>
+                  <option>Compliance Officer / Manager</option>
+                  <option>Legal / Regulatory Affairs</option>
+                  <option>Finance / Accounting</option>
+                  <option>IT / Data Management</option>
+                  <option>C-Suite / Executive</option>
+                  <option>Operations</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="reporting-status">Current Reporting Situation</label>
+                <select id="reporting-status" name="reporting-status">
+                  <option value="" disabled selected>How are you currently handling Open Payments?</option>
+                  <option>We're using another vendor (MediSpend, Alanda, etc.)</option>
+                  <option>We're managing it in-house manually</option>
+                  <option>We're new to reporting requirements</option>
+                  <option>We're evaluating options for next year</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Anything else you'd like us to know?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your current reporting challenges, data volume, number of products, or any specific questions you have..."></textarea>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="consent" name="consent" class="mt-1 w-4 h-4 flex-shrink-0" style="accent-color: #00a896;" required />
+                <label for="consent" class="text-xs text-gray-500 leading-relaxed">
+                  I agree to receive communications from Accurate Spend about this demo request and relevant compliance updates. You can unsubscribe at any time.
+                </label>
+              </div>
+
+              <button type="submit" class="btn-primary w-full justify-center text-base py-3.5">
+                <i class="fa-solid fa-calendar-check"></i> Request My Free Demo
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="md:col-span-2 space-y-6">
+
+          <!-- What to Expect -->
+          <div class="bg-white rounded-2xl p-6" style="border: 1px solid #e2e8f0;">
+            <h3 class="font-bold text-base mb-4" style="color: #1a3363;">
+              <i class="fa-solid fa-star mr-2" style="color: #00a896;"></i>What to Expect
+            </h3>
+            <div class="space-y-4">
+              <div class="flex gap-3">
+                <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style="background: #00a896;">1</div>
+                <div>
+                  <p class="font-semibold text-sm" style="color: #1a3363;">Tailored to Your Situation</p>
+                  <p class="text-gray-500 text-xs leading-relaxed mt-0.5">We review your submission before the call so the demo is relevant to your data, your systems, and your timeline.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style="background: #00a896;">2</div>
+                <div>
+                  <p class="font-semibold text-sm" style="color: #1a3363;">30-Minute Expert Walkthrough</p>
+                  <p class="text-gray-500 text-xs leading-relaxed mt-0.5">A senior compliance consultant walks you through the Accurate Spend process — focused on your specific reporting needs.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style="background: #00a896;">3</div>
+                <div>
+                  <p class="font-semibold text-sm" style="color: #1a3363;">Open Q&amp;A</p>
+                  <p class="text-gray-500 text-xs leading-relaxed mt-0.5">Ask anything — about the process, the team, pricing, timelines, or your specific data challenges. No topic is off-limits.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold mt-0.5" style="background: #00a896;">4</div>
+                <div>
+                  <p class="font-semibold text-sm" style="color: #1a3363;">Zero Obligation</p>
+                  <p class="text-gray-500 text-xs leading-relaxed mt-0.5">No pressure, no contract to sign. Just a straightforward conversation about whether Accurate Spend is the right fit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why switch -->
+          <div class="rounded-2xl p-6" style="background: linear-gradient(135deg, #0d1f3c, #1a3363); border: 1px solid rgba(255,255,255,0.1);">
+            <h3 class="text-white font-bold text-base mb-4">
+              <i class="fa-solid fa-tags mr-2" style="color: #00a896;"></i>Our Pricing Promise
+            </h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.875rem; line-height: 1.7;">
+              Accurate Spend is built to be the most affordable federal aggregate spend reporting solution on the market — significantly less than what legacy vendors like MediSpend and Alanda charge.
+            </p>
+            <p class="mt-3" style="color: rgba(255,255,255,0.7); font-size: 0.875rem; line-height: 1.7;">
+              We'll discuss transparent, straightforward pricing on the demo call.
+            </p>
+          </div>
+
+          <!-- Contact Direct -->
+          <div class="bg-white rounded-2xl p-6" style="border: 1px solid #e2e8f0;">
+            <h3 class="font-bold text-base mb-4" style="color: #1a3363;">
+              <i class="fa-solid fa-envelope mr-2" style="color: #00a896;"></i>Prefer to Reach Out Directly?
+            </h3>
+            <div class="space-y-3">
+              <a href="mailto:hello@accuratespend.com" class="flex items-center gap-3 text-sm text-gray-600 hover:text-teal-700 transition-colors">
+                <i class="fa-solid fa-envelope w-5" style="color: #00a896;"></i>
+                hello@accuratespend.com
+              </a>
+              <div class="flex items-start gap-3 text-sm text-gray-500">
+                <i class="fa-solid fa-clock w-5 mt-0.5" style="color: #00a896;"></i>
+                <span>We respond within 1 business day. Demo sessions available Monday–Friday, 9am–5pm ET.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust signals -->
+          <div class="rounded-2xl p-5" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <p class="text-2xl font-black" style="color: #1a3363;">10+</p>
+                <p class="text-gray-500 text-xs mt-1">Years Experience</p>
+              </div>
+              <div>
+                <p class="text-2xl font-black" style="color: #1a3363;">100%</p>
+                <p class="text-gray-500 text-xs mt-1">Federal Compliant</p>
+              </div>
+              <div>
+                <p class="text-2xl font-black" style="color: #00a896;">Low</p>
+                <p class="text-gray-500 text-xs mt-1">Competitive Price</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-circle-question"></i> Common Questions</div>
+        </div>
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+
+        <details class="rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm" style="color: #1a3363; list-style: none;">
+            What does the demo cover?
+            <i class="fa-solid fa-chevron-down text-xs" style="color: #00a896;"></i>
+          </summary>
+          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+            We tailor every demo to the client. Typically we cover: how the Accurate Spend reporting process works end-to-end, how we handle your specific data formats, what the consultant engagement model looks like, timeline to first submission, and pricing — followed by open Q&amp;A.
+          </div>
+        </details>
+
+        <details class="rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm" style="color: #1a3363; list-style: none;">
+            How quickly can we get started?
+            <i class="fa-solid fa-chevron-down text-xs" style="color: #00a896;"></i>
+          </summary>
+          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+            Onboarding is fast — typically days, not months. Unlike enterprise software implementations, we don't require lengthy system setups. Once we understand your data and reporting scope, we can begin the process very quickly.
+          </div>
+        </details>
+
+        <details class="rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm" style="color: #1a3363; list-style: none;">
+            What data formats can you accept?
+            <i class="fa-solid fa-chevron-down text-xs" style="color: #00a896;"></i>
+          </summary>
+          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+            Any format your team currently uses. This includes Excel spreadsheets, CSV files, SAP or Oracle exports, Salesforce reports, Veeva extracts, or any custom data file. We don't require you to reformat or restructure your data — our team handles all transformation.
+          </div>
+        </details>
+
+        <details class="rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm" style="color: #1a3363; list-style: none;">
+            How does pricing work?
+            <i class="fa-solid fa-chevron-down text-xs" style="color: #00a896;"></i>
+          </summary>
+          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+            We provide transparent, straightforward pricing based on your reporting scope — primarily the volume of records and complexity of your data sources. We'll walk through pricing on the demo call. What we guarantee: it will be significantly less than what you'd pay with MediSpend, Alanda, or comparable enterprise platforms.
+          </div>
+        </details>
+
+        <details class="rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm" style="color: #1a3363; list-style: none;">
+            Do you only handle federal Open Payments reporting?
+            <i class="fa-solid fa-chevron-down text-xs" style="color: #00a896;"></i>
+          </summary>
+          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+            Yes — Accurate Spend is exclusively focused on federal CMS Open Payments reporting under the Sunshine Act. This focus allows us to provide deeper expertise, tighter processes, and better pricing than generalist platforms. We do not provide state transparency reporting.
+          </div>
+        </details>
+
+        <details class="rounded-xl overflow-hidden" style="border: 1px solid #e2e8f0;">
+          <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-sm" style="color: #1a3363; list-style: none;">
+            We're already using another vendor — can we switch?
+            <i class="fa-solid fa-chevron-down text-xs" style="color: #00a896;"></i>
+          </summary>
+          <div class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">
+            Absolutely. Many of our clients have transitioned from other vendors — typically because they wanted more consultant support, more flexibility with their data, or simply to reduce costs. We manage the transition smoothly, including importing historical data and maintaining continuity of your compliance record.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+              <i class="fa-solid fa-chart-line text-white text-base"></i>
+            </div>
+            <span class="text-xl font-bold text-white tracking-tight">Accurate<span style="color: #00a896;">Spend</span></span>
+          </a>
+          <p style="color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.7; max-width: 320px;">
+            Expert-led federal aggregate spend reporting for pharmaceutical manufacturers — compliant, affordable, and fully managed.
+          </p>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Solutions</p>
+          <a href="solutions-accurate-spend.html" class="footer-link">Accurate Spend</a>
+          <a href="solutions-accurate-spend.html#how-it-works" class="footer-link">How It Works</a>
+          <a href="solutions-accurate-spend.html#features" class="footer-link">Features</a>
+        </div>
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Company</p>
+          <a href="index.html#services"  class="footer-link">Services</a>
+          <a href="index.html#expertise" class="footer-link">Expertise</a>
+          <a href="index.html#about"     class="footer-link">About</a>
+          <a href="contact.html"         class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div class="border-t pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style="border-color: rgba(255,255,255,0.1);">
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">&copy; 2025 Accurate Spend. All rights reserved.</p>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">Federal CMS Open Payments Reporting &nbsp;·&nbsp; Sunshine Act Compliance</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
