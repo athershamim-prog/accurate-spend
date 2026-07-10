@@ -21,6 +21,8 @@
     }
   </script>
 
+  <script>document.documentElement.classList.add('has-js');</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -52,10 +54,10 @@
             </button>
             <div id="solutions-dropdown" class="dropdown-menu">
               <a href="solutions-accurate-spend.html" class="dropdown-item">
-                <div class="icon-wrap"><i class="fa-solid fa-file-chart-column"></i></div>
+                <div class="icon-wrap"><i class="fa-solid fa-file-invoice-dollar"></i></div>
                 <div class="item-text">
                   <strong>Accurate Spend</strong>
-                  <span>Federal Aggregate Spend Reporting</span>
+                  <span>Federal Reporting</span>
                 </div>
               </a>
               <a href="solutions-hcp-engage.html" class="dropdown-item">
@@ -67,13 +69,11 @@
               </a>
             </div>
           </div>
-          <a href="index.html#services"   class="nav-link">Services</a>
-          <a href="index.html#expertise"  class="nav-link">Expertise</a>
-          <a href="index.html#about"      class="nav-link">About</a>
+          <a href="services-state-reporting.html" class="nav-link" data-page="services-state-reporting.html">Services</a>
+          <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
         </div>
 
         <div class="hidden md:flex items-center gap-4">
-          <a href="contact.html" class="nav-link">Contact</a>
           <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
             <i class="fa-solid fa-calendar-check"></i> Book a Demo
           </a>
@@ -88,9 +88,7 @@
       <a href="index.html"                      class="mobile-nav-link">Home</a>
       <a href="solutions-accurate-spend.html"   class="mobile-nav-link">Solutions — Accurate Spend</a>
       <a href="solutions-hcp-engage.html"       class="mobile-nav-link">Solutions — HCP Engage</a>
-      <a href="index.html#services"             class="mobile-nav-link">Services</a>
-      <a href="index.html#expertise"            class="mobile-nav-link">Expertise</a>
-      <a href="index.html#about"                class="mobile-nav-link">About</a>
+      <a href="services-state-reporting.html"   class="mobile-nav-link">Services — State Reporting</a>
       <a href="contact.html"                    class="mobile-nav-link">Contact</a>
       <div class="pt-3">
         <a href="contact.html" class="btn-primary w-full justify-center">
@@ -103,7 +101,7 @@
   <!-- ══════════════════════════════════════
        HERO
   ══════════════════════════════════════ -->
-  <section class="hero-bg pt-32 pb-20">
+  <section class="hero-bg theme-hcp pt-32 pb-20">
     <div class="hero-glow"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
 
@@ -126,7 +124,7 @@
           </div>
           <h1 class="text-white font-black leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
             Every HCP Interaction —<br/>
-            <span style="color: #00a896;">Captured, Justified, Audit-Ready</span>
+            <span class="accent">Nothing Left to Chance</span>
           </h1>
           <p class="mb-8" style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.75; max-width: 520px;">
             HCP Engage governs the full lifecycle of healthcare professional interactions — from NPI-verified onboarding and debarment screening through FMV-enforced engagements, approval workflows, and Sunshine Act-ready reporting. Zero compliance exposure, by design.
@@ -188,86 +186,80 @@
   </section>
 
   <!-- ══════════════════════════════════════
-       WHAT IS HCP ENGAGEMENT COMPLIANCE
+       THE HCP ENGAGEMENT PROBLEM (scroll reveal)
   ══════════════════════════════════════ -->
-  <section class="py-20 bg-white">
+  <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-14 items-center">
-        <div>
+      <div class="grid md:grid-cols-2 gap-14">
+
+        <!-- Left: pins while the points scroll past -->
+        <div class="challenge-sticky reveal self-start">
           <div class="section-tag mb-4"><i class="fa-solid fa-book-open"></i> Background</div>
           <h2 class="section-heading mb-5">
             The HCP Engagement <span>Compliance Problem</span>
           </h2>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            Under the <strong>Physician Payments Sunshine Act</strong>, every transfer of value between a pharma company and a healthcare professional must be documented, justified at fair market value, and reported to CMS. Most organizations manage this across disconnected spreadsheets, email chains, and paper contracts — creating gaps that become audit findings.
-          </p>
-          <p class="text-gray-600 leading-relaxed mb-4">
-            HCP Engage replaces that fragmented process with a single compliance-first platform. Every engagement is verified, approved, and recorded in a structured, immutable audit trail before a single dollar is paid.
-          </p>
           <p class="text-gray-600 leading-relaxed mb-6">
-            From NPI verification and OIG debarment screening at onboarding, to FMV enforcement and proof-of-performance collection at completion — every step is governed, timestamped, and stored for regulators, auditors, and your legal team.
+            Every interaction with a healthcare professional is a compliance event. Here's why the usual way of managing it puts you at risk — and how HCP Engage closes the gaps.
           </p>
-          <div class="rounded-xl p-5" style="background: #fff3cd; border-left: 4px solid #f59e0b;">
-            <p class="font-semibold text-sm mb-1" style="color: #92400e;">
-              <i class="fa-solid fa-triangle-exclamation mr-2"></i>Compliance Risk Reminder
-            </p>
-            <p class="text-sm" style="color: #78350f;">
-              Payments to OIG-excluded individuals can trigger exclusion from federal healthcare programs. Engagements above FMV without written justification expose organizations to DOJ False Claims Act liability.
-            </p>
-          </div>
+          <p class="text-sm" style="color:#94a3b8;">
+            <span id="challenge-counter" style="color:#00a896; font-weight:700;">0</span> / 4 essentials
+          </p>
         </div>
 
-        <!-- Engagement Types Panel -->
-        <div class="rounded-2xl p-8" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
-          <p class="font-bold mb-5" style="color: #1a3363;">Covered Engagement Types</p>
-          <div class="space-y-3">
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-white" style="border: 1px solid #e2e8f0;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background: #e6f7f6;">
-                <i class="fa-solid fa-people-group" style="color: #00a896;"></i>
+        <!-- Right: points reveal + spotlight one by one -->
+        <div class="space-y-6">
+
+          <div class="issue issue-light dim reveal rounded-2xl p-6" style="background:#fff; border:1px solid #e2e8f0;">
+            <div class="flex gap-4 items-start">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#e6f7f6;">
+                <i class="fa-solid fa-scale-balanced" style="color:#00a896;"></i>
               </div>
               <div>
-                <p class="font-semibold text-sm" style="color: #1a3363;">Advisory Board</p>
-                <p class="text-xs text-gray-500">Strategic counsel, product advisory, medical affairs boards</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-white" style="border: 1px solid #e2e8f0;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background: #e6f7f6;">
-                <i class="fa-solid fa-microphone" style="color: #00a896;"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-sm" style="color: #1a3363;">Speaker Program</p>
-                <p class="text-xs text-gray-500">Promotional education, peer-to-peer programs</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-white" style="border: 1px solid #e2e8f0;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background: #e6f7f6;">
-                <i class="fa-solid fa-flask" style="color: #00a896;"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-sm" style="color: #1a3363;">Investigator / Research</p>
-                <p class="text-xs text-gray-500">IIS, Phase IV studies, site-level research agreements</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-white" style="border: 1px solid #e2e8f0;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background: #e6f7f6;">
-                <i class="fa-solid fa-utensils" style="color: #00a896;"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-sm" style="color: #1a3363;">Meal / Transfer of Value</p>
-                <p class="text-xs text-gray-500">Educational meals, entertainment, non-monetary transfers</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 p-3 rounded-xl bg-white" style="border: 1px solid #e2e8f0;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background: #e6f7f6;">
-                <i class="fa-solid fa-graduation-cap" style="color: #00a896;"></i>
-              </div>
-              <div>
-                <p class="font-semibold text-sm" style="color: #1a3363;">Training</p>
-                <p class="text-xs text-gray-500">Medical education, product training, preceptorships</p>
+                <p class="font-bold mb-1" style="color:#1a3363;">The Requirement</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Under the Sunshine Act, every transfer of value between a pharma company and an HCP must be documented, justified at fair market value, and reported to CMS.</p>
               </div>
             </div>
           </div>
+
+          <div class="issue issue-light dim reveal rounded-2xl p-6" style="background:#fff; border:1px solid #e2e8f0;">
+            <div class="flex gap-4 items-start">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#fef3f2;">
+                <i class="fa-solid fa-table" style="color:#dc2626;"></i>
+              </div>
+              <div>
+                <p class="font-bold mb-1" style="color:#1a3363;">The Broken Status Quo</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Most teams juggle this across disconnected spreadsheets, email chains, and paper contracts — creating exactly the gaps that become audit findings.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="issue issue-light dim reveal rounded-2xl p-6" style="background:#fff; border:1px solid #e2e8f0;">
+            <div class="flex gap-4 items-start">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#e6f7f6;">
+                <i class="fa-solid fa-shield-halved" style="color:#00a896;"></i>
+              </div>
+              <div>
+                <p class="font-bold mb-1" style="color:#1a3363;">How HCP Engage Fixes It</p>
+                <p class="text-gray-500 text-sm leading-relaxed">One compliance-first platform: every engagement is NPI-verified, debarment-screened, FMV-justified, approved, and recorded in an immutable audit trail — before a single dollar is paid.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="issue issue-light dim reveal rounded-2xl p-6" style="background:#fff; border:1px solid #e2e8f0;">
+            <div class="flex gap-4 items-start">
+              <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#fef3f2;">
+                <i class="fa-solid fa-gavel" style="color:#dc2626;"></i>
+              </div>
+              <div>
+                <p class="font-bold mb-1" style="color:#1a3363;">The Compliance Risk</p>
+                <p class="text-gray-500 text-sm leading-relaxed">Payments to OIG-excluded individuals can trigger exclusion from federal healthcare programs; engagements above FMV without written justification expose you to DOJ False Claims Act liability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="height: 8vh;"></div>
         </div>
+
       </div>
     </div>
   </section>
@@ -426,7 +418,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-14">
         <div class="flex justify-center mb-4">
-          <div class="section-tag"><i class="fa-solid fa-sparkles"></i> Key Features</div>
+          <div class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Key Features</div>
         </div>
         <h2 class="section-heading mb-4">
           Compliance by Architecture. <span>Not by Policy.</span>
@@ -535,7 +527,7 @@
           HCP Engage vs. <span>Legacy Platforms</span>
         </h2>
         <p class="section-sub mx-auto">
-          See how HCP Engage stacks up against legacy platforms like Alanda and Medcompli.
+          See how HCP Engage stacks up against legacy enterprise platforms.
         </p>
       </div>
 
@@ -545,7 +537,7 @@
             <tr style="background: #1a3363; color: #fff;">
               <th class="text-left p-4 font-semibold">Capability</th>
               <th class="text-center p-4 font-semibold" style="background: #007f71;">HCP Engage</th>
-              <th class="text-center p-4 font-semibold opacity-80">Alanda / Medcompli</th>
+              <th class="text-center p-4 font-semibold opacity-80">Legacy Platforms</th>
             </tr>
           </thead>
           <tbody>
@@ -639,7 +631,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-14">
         <div class="flex justify-center mb-4">
-          <div class="section-tag"><i class="fa-solid fa-shield-check"></i> Compliance Architecture</div>
+          <div class="section-tag"><i class="fa-solid fa-shield-halved"></i> Compliance Architecture</div>
         </div>
         <h2 class="text-white font-bold mb-4" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
           Compliance Rules Enforced in <span style="color: #00a896;">Code, Not Policy</span>
@@ -707,7 +699,7 @@
             <span class="text-xl font-bold text-white tracking-tight">Accurate<span style="color: #00a896;">Spend</span></span>
           </a>
           <p style="color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.7; max-width: 320px;">
-            Expert-led pharma compliance solutions — federal aggregate spend reporting and HCP engagement compliance, fully managed.
+            Expert-led pharma compliance solutions — federal and state reporting and HCP engagement compliance, fully managed.
           </p>
           <div class="mt-5">
             <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
@@ -724,7 +716,7 @@
         </div>
         <div>
           <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Company</p>
-          <a href="index.html#services"   class="footer-link">Services</a>
+          <a href="services-state-reporting.html"   class="footer-link">Services</a>
           <a href="index.html#expertise"  class="footer-link">Expertise</a>
           <a href="index.html#about"      class="footer-link">About</a>
           <a href="contact.html"          class="footer-link">Contact</a>

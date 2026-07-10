@@ -98,4 +98,52 @@ document.addEventListener('DOMContentLoaded', () => {
     if (link.dataset.page === path) link.classList.add('active');
   });
 
+  /* ── Scroll reveal (Challenge + Background sections) ── */
+  const reveals = document.querySelectorAll('.reveal, .sr, .sr-group');
+  if (reveals.length) {
+    if ('IntersectionObserver' in window) {
+      const revealIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => revealIO.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('in'));
+    }
+  }
+
+  /* ── Challenge: spotlight the centered issue, dim upcoming, fill the rail ── */
+  const issues = [...document.querySelectorAll('.issue')];
+  if (issues.length) {
+    const cCounter  = document.getElementById('challenge-counter');
+    const cRailFill = document.getElementById('challenge-rail-fill');
+    const cRail     = document.querySelector('.rail');
+    const onChallengeScroll = () => {
+      const mid = window.innerHeight * 0.5;
+      let activeIdx = -1;
+      issues.forEach((el, i) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < mid && r.bottom > 120) activeIdx = i;
+      });
+      issues.forEach((el, i) => {
+        el.classList.toggle('active', i === activeIdx);
+        el.classList.toggle('dim', i > activeIdx);
+      });
+      if (cCounter) cCounter.textContent = Math.max(0, activeIdx + 1);
+      if (cRailFill && cRail) {
+        if (activeIdx >= 0) {
+          const rr = cRail.getBoundingClientRect();
+          const ar = issues[activeIdx].getBoundingClientRect();
+          cRailFill.style.height = Math.max(0, ar.bottom - rr.top) + 'px';
+        } else {
+          cRailFill.style.height = '0px';
+        }
+      }
+    };
+    window.addEventListener('scroll', onChallengeScroll, { passive: true });
+    window.addEventListener('resize', onChallengeScroll);
+    onChallengeScroll();
+  }
+
 });

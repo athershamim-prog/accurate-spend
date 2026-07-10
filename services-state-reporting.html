@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State Reporting — Pharma State Transparency &amp; Disclosure | Accurate Spend</title>
+  <meta name="description" content="State transparency and disclosure reporting for pharmaceutical manufacturers across Massachusetts, Minnesota, Vermont, Connecticut, and Nevada — expert-managed, each to its own rules, thresholds, and deadlines." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#1a3363', dark: '#0d1f3c', light: '#244a8a' },
+            teal:  { DEFAULT: '#00a896', dark: '#007f71', light: '#e6f7f6' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+
+        <a href="index.html" class="flex items-center gap-2.5 text-white no-underline">
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+            <i class="fa-solid fa-chart-line text-white text-base"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">
+            Accurate<span style="color: #00a896;">Spend</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="index.html">Home</a>
+          <div class="relative">
+            <button id="solutions-trigger" class="nav-link flex items-center gap-1.5 bg-transparent border-0 cursor-pointer">
+              Solutions <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            </button>
+            <div id="solutions-dropdown" class="dropdown-menu">
+              <a href="solutions-accurate-spend.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <div class="item-text">
+                  <strong>Accurate Spend</strong>
+                  <span>Federal Reporting</span>
+                </div>
+              </a>
+              <a href="solutions-hcp-engage.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-user-doctor"></i></div>
+                <div class="item-text">
+                  <strong>HCP Engage</strong>
+                  <span>HCP Engagement Compliance Platform</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="services-state-reporting.html" class="nav-link active" data-page="services-state-reporting.html">Services</a>
+          <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+            <i class="fa-solid fa-calendar-check"></i> Book a Demo
+          </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white text-xl p-2">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html"                    class="mobile-nav-link">Home</a>
+      <a href="solutions-accurate-spend.html" class="mobile-nav-link">Solutions — Accurate Spend</a>
+      <a href="solutions-hcp-engage.html"     class="mobile-nav-link">Solutions — HCP Engage</a>
+      <a href="services-state-reporting.html" class="mobile-nav-link">Services — State Reporting</a>
+      <a href="contact.html"                  class="mobile-nav-link">Contact</a>
+      <div class="pt-3">
+        <a href="contact.html" class="btn-primary w-full justify-center">
+          <i class="fa-solid fa-calendar-check"></i> Book a Demo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero-bg theme-federal pt-32 pb-20">
+    <div class="hero-glow"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8" aria-label="breadcrumb">
+        <ol class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+          <li><a href="services-state-reporting.html" class="hover:text-white transition-colors">Services</a></li>
+          <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+          <li style="color: #4dd6c8;">State Reporting</li>
+        </ol>
+      </nav>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="badge mb-5">
+            <i class="fa-solid fa-map-location-dot"></i>
+            State Transparency Reporting
+          </div>
+          <h1 class="text-white font-black leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+            State Reporting —<br/>
+            <span class="accent">No State Slips Through</span>
+          </h1>
+          <p class="mb-8" style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.75; max-width: 520px;">
+            Federal Open Payments isn't the whole picture. A handful of states impose their own transparency, disclosure, and gift-restriction obligations on pharmaceutical manufacturers — each with distinct thresholds, formats, and deadlines. Our State Reporting service manages them for you.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn-primary">
+              <i class="fa-solid fa-calendar-check"></i> Book a Free Demo
+            </a>
+            <a href="#states" class="btn-outline">
+              States We Cover <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- States Quick Panel -->
+        <div class="rounded-2xl p-8" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); backdrop-filter: blur(10px);">
+          <p class="text-white font-bold text-lg mb-6">Jurisdictions We Cover</p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-location-dot" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Massachusetts</strong> — annual disclosure &amp; marketing code of conduct</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-location-dot" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Minnesota</strong> — gift restrictions &amp; annual payment reporting</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-location-dot" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Vermont</strong> — allowable-expenditure disclosure &amp; gift ban</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-location-dot" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Connecticut</strong> — state marketing &amp; disclosure compliance</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-location-dot" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Nevada</strong> — manufacturer reporting &amp; marketing-code compliance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHAT IS STATE REPORTING
+  ══════════════════════════════════════ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="section-tag mb-4"><i class="fa-solid fa-book-open"></i> Background</div>
+          <h2 class="section-heading mb-5">
+            What Is <span>State Reporting?</span>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            While the federal Sunshine Act (CMS Open Payments) sets a national baseline, several states have enacted their <strong>own</strong> transparency laws governing how pharmaceutical manufacturers interact with — and spend on — healthcare professionals within their borders.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            These obligations can include annual disclosure of payments and gifts, marketing codes of conduct, gift and expenditure restrictions, and licensing or registration requirements. Critically, each state has its <strong>own thresholds, file formats, submission portals, and deadlines</strong> — and they do not align with the federal cycle.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            State Reporting is a service offering that sits alongside our federal <a href="solutions-accurate-spend.html" class="font-semibold underline" style="color:#007f71;">Accurate Spend</a> solution — so your federal and state obligations are both covered, without stitching together multiple vendors.
+          </p>
+          <div class="rounded-xl p-5" style="background: #fff3cd; border-left: 4px solid #f59e0b;">
+            <p class="font-semibold text-sm mb-1" style="color: #92400e;">
+              <i class="fa-solid fa-triangle-exclamation mr-2"></i>Why It's Easy to Miss
+            </p>
+            <p class="text-sm" style="color: #78350f;">
+              State requirements change frequently and vary widely. A manufacturer fully compliant federally can still be exposed at the state level — where separate penalties and enforcement apply.
+            </p>
+          </div>
+        </div>
+
+        <!-- What we handle -->
+        <div class="rounded-2xl p-8" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+          <p class="font-bold mb-5" style="color: #1a3363;">What Our State Service Handles</p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Determining which states you have obligations in
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Mapping your spend data to each state's format and thresholds
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Preparing and submitting each state disclosure or report
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Tracking gift and expenditure restrictions where they apply
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Managing registrations, renewals, and per-state deadlines
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Keeping pace with annual rule and threshold changes
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       STATES WE COVER
+  ══════════════════════════════════════ -->
+  <section id="states" class="py-20" style="background: #f8fafc;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-map"></i> Coverage</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          States We <span>Cover</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          We focus on the major state transparency jurisdictions where pharmaceutical manufacturers most commonly have obligations. Requirements vary by state and change over time — we track them so you don't have to.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Massachusetts</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Annual disclosure of payments and transfers of value to covered recipients, alongside a marketing code of conduct that governs how manufacturers engage with HCPs in the state.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Minnesota</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            One of the earliest state regimes — combining restrictions on gifts to practitioners with annual reporting of payments made to healthcare providers licensed in the state.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Vermont</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Annual disclosure of allowable expenditures and gifts, paired with one of the stricter gift bans in the country — with reporting to the state Attorney General.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Connecticut</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            State-level marketing and disclosure compliance obligations affecting how manufacturers document and report their commercial interactions with healthcare professionals.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Nevada</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Manufacturer reporting and marketing-code compliance obligations — including specific requirements tied to certain drug categories and sales-representative activity.
+          </p>
+        </div>
+
+        <div class="usp-card" style="border-color: #00a896; background: #f0fdf9;">
+          <div class="usp-icon" style="background: #1a3363; color: #fff;">
+            <i class="fa-solid fa-circle-plus"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Expanding Coverage</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            State transparency laws continue to evolve. Have an obligation in a state not listed here? Tell us — we'll assess it and fold it into your reporting program.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HOW IT WORKS
+  ══════════════════════════════════════ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-gears"></i> How It Works</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          One Data Set. <span>Every State Filing.</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          The same spend data you already provide us can drive your state filings — no separate collection effort on your side.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-clipboard-check" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Obligation Assessment</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">We identify which states you're required to report in based on your activity</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-map" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Per-State Mapping</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">Your data is mapped to each state's thresholds, categories, and file format</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-paper-plane" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Submission</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">We prepare and file each state disclosure through its required channel</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-circle">4</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-calendar-check" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Deadline Tracking</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">Registrations, renewals, and every state deadline managed year-round</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHY US
+  ══════════════════════════════════════ -->
+  <section class="py-20" style="background: #f0f6ff;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-star"></i> Why Accurate Spend</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          Federal and State — <span>From One Partner</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          Run your federal and state reporting through the same expert team, on the same data, at a price that makes sense.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">No Data Rework</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Your state filings run off the same spend data we already handle for federal reporting — no second collection effort, no reformatting on your end.
+          </p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #fff3e0; color: #f59e0b;">
+            <i class="fa-solid fa-tags"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Cost-Effective Add-On</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            State Reporting is priced as a straightforward extension of your program — a fraction of what enterprise vendors charge to bolt on state coverage.
+          </p>
+        </div>
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #ede9fe; color: #7c3aed;">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Experts on the Rules</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            State requirements shift often. Our consultants track the changes across every jurisdiction we cover, so your filings stay current year after year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════ -->
+  <section class="cta-banner py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-white font-black mb-4" style="font-size: clamp(1.8rem, 4vw, 2.75rem);">
+        Not Sure Which States You're On the Hook For?
+      </h2>
+      <p class="text-lg mb-10" style="color: rgba(255,255,255,0.8);">
+        Book a free demo and we'll walk through your footprint and where state reporting obligations may apply.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="btn-primary text-base">
+          <i class="fa-solid fa-calendar-check"></i> Book a Free Demo
+        </a>
+        <a href="solutions-accurate-spend.html" class="btn-outline text-base">
+          See Federal Reporting
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+              <i class="fa-solid fa-chart-line text-white text-base"></i>
+            </div>
+            <span class="text-xl font-bold text-white tracking-tight">
+              Accurate<span style="color: #00a896;">Spend</span>
+            </span>
+          </a>
+          <p style="color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.7; max-width: 320px;">
+            Expert-led federal and state reporting for pharmaceutical manufacturers — compliant, cost-effective, and fully managed.
+          </p>
+          <div class="flex gap-3 mt-5">
+            <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+              <i class="fa-solid fa-calendar-check"></i> Book a Demo
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Solutions &amp; Services</p>
+          <a href="solutions-accurate-spend.html" class="footer-link">Accurate Spend — Federal Reporting</a>
+          <a href="services-state-reporting.html" class="footer-link">State Reporting</a>
+          <a href="solutions-hcp-engage.html" class="footer-link">HCP Engage</a>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Company</p>
+          <a href="services-state-reporting.html"  class="footer-link">Services</a>
+          <a href="index.html#expertise" class="footer-link">Expertise</a>
+          <a href="index.html#about"     class="footer-link">About</a>
+          <a href="contact.html"         class="footer-link">Contact</a>
+          <a href="contact.html"         class="footer-link">Book a Demo</a>
+        </div>
+      </div>
+
+      <div class="border-t pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style="border-color: rgba(255,255,255,0.1);">
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">
+          &copy; 2025 Accurate Spend. All rights reserved.
+        </p>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">
+          Federal CMS Open Payments &amp; State Transparency Reporting &nbsp;·&nbsp; Sunshine Act Compliance
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -106,6 +106,64 @@ body { font-family: 'Inter', system-ui, sans-serif; }
   pointer-events: none;
 }
 
+/* ── Per-page hero themes ──
+   Every hero keeps home's navy background color. Pages are differentiated by the
+   caption (heading accent) + badge color only; the gradient angle and a faint
+   accent glow vary subtly for texture — the base hue stays the same as home. */
+
+/* Accurate Spend / Federal Reporting — sky caption */
+.hero-bg.theme-state {
+  background: linear-gradient(120deg, #0d1f3c 0%, #1a3363 50%, #1a4a7a 100%);
+}
+.hero-bg.theme-state .hero-glow {
+  background: radial-gradient(circle, rgba(92,192,255,0.16) 0%, transparent 70%);
+}
+.hero-bg.theme-state .badge {
+  background: rgba(0,119,204,0.18);
+  border-color: rgba(0,119,204,0.4);
+  color: #7cc4ff;
+}
+
+/* State Reporting — teal caption */
+.hero-bg.theme-federal {
+  background: linear-gradient(150deg, #0d1f3c 0%, #1a3363 50%, #1a4a7a 100%);
+}
+.hero-bg.theme-federal .hero-glow {
+  background: radial-gradient(circle, rgba(45,212,191,0.16) 0%, transparent 70%);
+}
+
+/* HCP Engage — indigo caption */
+.hero-bg.theme-hcp {
+  background: linear-gradient(160deg, #0d1f3c 0%, #1a3363 50%, #1a4a7a 100%);
+}
+.hero-bg.theme-hcp .hero-glow {
+  background: radial-gradient(circle, rgba(124,92,255,0.16) 0%, transparent 70%);
+}
+.hero-bg.theme-hcp .badge {
+  background: rgba(124,92,255,0.18);
+  border-color: rgba(124,92,255,0.42);
+  color: #c3b8ff;
+}
+
+/* Contact — mint caption */
+.hero-bg.theme-contact {
+  background: linear-gradient(110deg, #0d1f3c 0%, #1a3363 50%, #1a4a7a 100%);
+}
+.hero-bg.theme-contact .hero-glow {
+  background: radial-gradient(circle, rgba(94,234,212,0.16) 0%, transparent 70%);
+}
+.hero-bg.theme-contact .badge {
+  background: rgba(16,185,129,0.18);
+  border-color: rgba(16,185,129,0.42);
+  color: #6ee7b7;
+}
+
+/* Subpage hero heading accent (caption) — the per-page differentiator */
+.hero-bg.theme-federal h1 .accent { color: #2dd4bf; }
+.hero-bg.theme-state h1 .accent   { color: #5cc0ff; }
+.hero-bg.theme-hcp h1 .accent     { color: #c3b8ff; }
+.hero-bg.theme-contact h1 .accent { color: #5eead4; }
+
 /* ── Buttons ── */
 .btn-primary {
   display: inline-flex;
@@ -400,6 +458,88 @@ footer {
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
+
+/* ── Scroll reveal (Challenge section) — gated on .has-js so content
+      is never hidden when JavaScript is unavailable ── */
+.has-js .reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  filter: blur(8px);
+  transition: opacity .8s cubic-bezier(.2,.7,.2,1),
+              transform .8s cubic-bezier(.2,.7,.2,1),
+              filter .8s ease;
+  will-change: opacity, transform, filter;
+}
+.has-js .reveal.in { opacity: 1; transform: none; filter: none; }
+
+/* Homepage Challenge — slower, more deliberate reveal + rail fill */
+#challenge .reveal { transition-duration: 1.2s; }
+#challenge .rail-fill { transition: height .6s ease; }
+
+/* Active issue spotlight + dimmed upcoming issues */
+.issue { transition: opacity .5s ease, transform .5s ease, border-color .5s ease, box-shadow .5s ease; }
+.issue.active {
+  border-color: rgba(0,168,150,0.55) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  transform: translateY(-2px);
+}
+/* Light-section cards (solution Background) get a softer lift */
+.issue-light.active { box-shadow: 0 14px 40px rgba(26,51,99,0.16); }
+/* Dim non-active cards only on desktop, where the left column pins and the
+   spotlight steps through one at a time. On mobile (stacked, no pin) every
+   card stays fully readable — just the fade-in + active highlight remain. */
+@media (min-width: 768px) {
+  .has-js .issue.dim { opacity: 0.3; }
+}
+
+/* Left column pins on desktop; static on mobile */
+.challenge-sticky { position: static; }
+@media (min-width: 768px) {
+  .challenge-sticky { position: sticky; top: 130px; }
+}
+
+/* Progress rail behind the issue stack */
+.rail { position: relative; }
+.rail-line { position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: rgba(255,255,255,0.12); }
+.rail-fill { position: absolute; left: 19px; top: 0; width: 2px; background: var(--teal); height: 0; transition: height .3s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .has-js .reveal { opacity: 1; transform: none; filter: none; transition: none; }
+  .has-js .issue.dim { opacity: 1; }
+}
+
+/* ── Scroll reveal — Solution "Background" sections (directional cascade) ──
+      Distinct from the Challenge reveal: text cascades up line-by-line on the
+      left while the panel glides in from the right. ── */
+.has-js .sr {
+  opacity: 0;
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.has-js .sr-up    { transform: translateY(40px); }
+.has-js .sr-right { transform: translateX(56px); }
+.has-js .sr-left  { transform: translateX(-56px); }
+.has-js .sr.in    { opacity: 1; transform: none; }
+
+/* Staggered cascade for a group's direct children */
+.has-js .sr-group > * {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.has-js .sr-group.in > * { opacity: 1; transform: none; }
+.has-js .sr-group > *:nth-child(2) { transition-delay: .08s; }
+.has-js .sr-group > *:nth-child(3) { transition-delay: .16s; }
+.has-js .sr-group > *:nth-child(4) { transition-delay: .24s; }
+.has-js .sr-group > *:nth-child(5) { transition-delay: .32s; }
+.has-js .sr-group > *:nth-child(6) { transition-delay: .40s; }
+.has-js .sr-group > *:nth-child(7) { transition-delay: .48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .has-js .sr,
+  .has-js .sr-group > * { opacity: 1; transform: none; transition: none; }
+}
 
 /* ── Testimonial ── */
 .testimonial-card {
