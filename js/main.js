@@ -53,15 +53,38 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── Contact form submission ── */
   const demoForm = document.getElementById('demo-form');
   if (demoForm) {
-    demoForm.addEventListener('submit', (e) => {
+    demoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = demoForm.querySelector('button[type="submit"]');
-      btn.textContent = 'Request Sent!';
+      const originalHTML = btn.innerHTML;
+
       btn.disabled = true;
-      btn.style.background = '#007f71';
-      demoForm.reset();
-      const msg = document.getElementById('form-success');
-      if (msg) msg.classList.remove('hidden');
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+
+      const data = {};
+      new FormData(demoForm).forEach((value, key) => { data[key] = value; });
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (!res.ok) throw new Error('Server error');
+
+        btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Request Sent!';
+        btn.style.background = '#007f71';
+        demoForm.reset();
+        const msg = document.getElementById('form-success');
+        if (msg) msg.classList.remove('hidden');
+        msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } catch {
+        btn.disabled = false;
+        btn.innerHTML = originalHTML;
+        const errEl = document.getElementById('form-error');
+        if (errEl) errEl.classList.remove('hidden');
+      }
     });
   }
 
