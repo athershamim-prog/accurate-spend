@@ -31,12 +31,38 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownTrigger.addEventListener('click', (e) => {
       e.stopPropagation();
       dropdownMenu.classList.toggle('open');
+      if (servicesDrop) servicesDrop.classList.remove('open');
     });
     document.addEventListener('click', () => {
       dropdownMenu.classList.remove('open');
     });
     dropdownMenu.addEventListener('click', e => e.stopPropagation());
   }
+
+  /* ── Services dropdown ── */
+  const servicesTrigger = document.getElementById('services-trigger');
+  const servicesDrop    = document.getElementById('services-dropdown');
+  if (servicesTrigger && servicesDrop) {
+    servicesTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      servicesDrop.classList.toggle('open');
+      if (dropdownMenu) dropdownMenu.classList.remove('open');
+    });
+    document.addEventListener('click', () => {
+      servicesDrop.classList.remove('open');
+    });
+    servicesDrop.addEventListener('click', e => e.stopPropagation());
+  }
+
+  /* ── Mobile nav accordions (Solutions / Services) ── */
+  document.querySelectorAll('.mobile-nav-toggle').forEach(btn => {
+    const target = document.getElementById(btn.dataset.target);
+    if (!target) return;
+    btn.addEventListener('click', () => {
+      const isOpen = target.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+    });
+  });
 
   /* ── Smooth scroll for anchor links ── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

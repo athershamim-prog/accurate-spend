@@ -4,6 +4,10 @@
   "rewrites": [
     { "source": "/solutions/accurate-spend", "destination": "/solutions-accurate-spend.html" }
   ],
+  "redirects": [
+    { "source": "/services-compliance-hub", "destination": "/accurate-ai", "permanent": true },
+    { "source": "/services-compliance-hub.html", "destination": "/accurate-ai", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accurate AI — The AI Engine Behind Accurate Spend | Accurate Spend</title>
+  <meta name="description" content="Accurate AI is the artificial intelligence engine that powers Accurate Spend and solves custom compliance problems for pharmaceutical and life sciences companies — intelligent data extraction, mapping, anomaly detection, and automated reporting." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#1a3363', dark: '#0d1f3c', light: '#244a8a' },
+            teal:  { DEFAULT: '#00a896', dark: '#007f71', light: '#e6f7f6' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <script>document.documentElement.classList.add('has-js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+
+        <a href="index.html" class="flex items-center gap-2.5 text-white no-underline">
+          <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+            <i class="fa-solid fa-chart-line text-white text-base"></i>
+          </div>
+          <span class="text-xl font-bold tracking-tight">
+            Accurate<span style="color: #00a896;">Spend</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-page="index.html">Home</a>
+          <div class="relative">
+            <button id="solutions-trigger" class="nav-link flex items-center gap-1.5 bg-transparent border-0 cursor-pointer">
+              Solutions <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            </button>
+            <div id="solutions-dropdown" class="dropdown-menu">
+              <a href="solutions-accurate-spend.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <div class="item-text">
+                  <strong>Accurate Spend</strong>
+                  <span>Federal Reporting</span>
+                </div>
+              </a>
+              <a href="solutions-hcp-engage.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-user-doctor"></i></div>
+                <div class="item-text">
+                  <strong>HCP Engage</strong>
+                  <span>HCP Engagement Compliance Platform</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Services Dropdown -->
+          <div class="relative">
+            <button id="services-trigger" class="nav-link active flex items-center gap-1.5 bg-transparent border-0 cursor-pointer">
+              Services <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            </button>
+            <div id="services-dropdown" class="dropdown-menu">
+              <a href="services-state-reporting.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="item-text">
+                  <strong>State Reporting</strong>
+                  <span>Multi-state transparency compliance</span>
+                </div>
+              </a>
+              <a href="accurate-ai.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                <div class="item-text">
+                  <strong>Accurate AI</strong>
+                  <span>Solving compliance challenges</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+            <i class="fa-solid fa-calendar-check"></i> Book a Demo
+          </a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white text-xl p-2">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu">
+      <a href="index.html"                              class="mobile-nav-link">Home</a>
+
+      <button class="mobile-nav-toggle" data-target="mobile-solutions">
+        Solutions <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div id="mobile-solutions" class="mobile-submenu">
+        <a href="solutions-accurate-spend.html" class="mobile-nav-sublink">Accurate Spend</a>
+        <a href="solutions-hcp-engage.html"     class="mobile-nav-sublink">HCP Engage</a>
+      </div>
+
+      <button class="mobile-nav-toggle" data-target="mobile-services">
+        Services <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div id="mobile-services" class="mobile-submenu">
+        <a href="services-state-reporting.html" class="mobile-nav-sublink">State Reporting</a>
+        <a href="accurate-ai.html"              class="mobile-nav-sublink">Accurate AI</a>
+      </div>
+
+      <a href="contact.html"                            class="mobile-nav-link">Contact</a>
+      <div class="pt-3">
+        <a href="contact.html" class="btn-primary w-full justify-center">
+          <i class="fa-solid fa-calendar-check"></i> Book a Demo
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero-bg pt-32 pb-20">
+    <div class="hero-glow"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <!-- Breadcrumb -->
+      <nav class="mb-8" aria-label="breadcrumb">
+        <ol class="flex items-center gap-2 text-sm" style="color: rgba(255,255,255,0.55);">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+          <li><a href="services-state-reporting.html" class="hover:text-white transition-colors">Services</a></li>
+          <li><i class="fa-solid fa-chevron-right text-xs"></i></li>
+          <li style="color: #4dd6c8;">Accurate AI</li>
+        </ol>
+      </nav>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="badge mb-5">
+            <i class="fa-solid fa-brain"></i>
+            The AI Behind Accurate Spend
+          </div>
+          <h1 class="text-white font-black leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+            Accurate AI —<br/>
+            <span style="color: #00a896;">Built to Solve Compliance Problems</span>
+          </h1>
+          <p class="mb-8" style="color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.75; max-width: 520px;">
+            Accurate AI is the artificial intelligence engine at the core of Accurate Spend — reading, extracting, mapping, and validating pharma compliance data so filings are accurate without the manual work. The same AI also powers custom-engineered systems when off-the-shelf tools don't fit your workflow.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="btn-primary">
+              <i class="fa-solid fa-calendar-check"></i> Discuss Your Project
+            </a>
+            <a href="#capabilities" class="btn-outline">
+              See Accurate AI in Action <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Capability Quick Panel -->
+        <div class="rounded-2xl p-8" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); backdrop-filter: blur(10px);">
+          <p class="text-white font-bold text-lg mb-6">What Accurate AI Does</p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-browser" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Custom Compliance Portals</strong> — bespoke web applications built to your process</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-robot" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>AI Data Processing</strong> — intelligent extraction, mapping, and validation</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-plug" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>System Integrations</strong> — ERP, CRM, Concur, Veeva connected to compliance workflows</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-chart-bar" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Analytics &amp; Dashboards</strong> — real-time compliance visibility across your organization</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.2);">
+                <i class="fa-solid fa-file-code" style="color: #00a896; font-size: 0.8rem;"></i>
+              </div>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;"><strong>Automated Reporting</strong> — AI-driven regulatory filing generation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHAT IS ACCURATE AI
+  ══════════════════════════════════════ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-14 items-center">
+        <div>
+          <div class="section-tag mb-4"><i class="fa-solid fa-book-open"></i> Background</div>
+          <h2 class="section-heading mb-5">
+            What Is <span>Accurate AI?</span>
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Most compliance platforms are built to handle the most common scenarios — but every pharmaceutical organization has unique data structures, workflows, and regulatory obligations that standard software simply wasn't designed to accommodate.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Accurate AI is our artificial intelligence engine, built specifically to solve compliance problems for pharma and life sciences companies. It's the intelligence layer that powers Accurate Spend — reading source documents, mapping data to regulatory categories, and catching errors before they become submission problems. Every model is informed by over a decade of hands-on pharma compliance expertise.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Beyond powering Accurate Spend, we also put Accurate AI to work on bespoke problems — a custom HCP payment tracking portal, a data pipeline connecting your ERP to a regulatory filing, or a custom approval workflow — scoped and built with compliance accuracy as the foundation.
+          </p>
+          <div class="rounded-xl p-5" style="background: #e6f7f6; border-left: 4px solid #00a896;">
+            <p class="font-semibold text-sm mb-1" style="color: #007f71;">
+              <i class="fa-solid fa-lightbulb mr-2"></i>Built on Domain Expertise
+            </p>
+            <p class="text-sm" style="color: #005f55;">
+              Unlike general-purpose AI tools, Accurate AI reflects deep knowledge of the Sunshine Act, state reporting rules, HCP engagement compliance, and the data realities of pharma commercial operations.
+            </p>
+          </div>
+        </div>
+
+        <!-- When you need this -->
+        <div class="rounded-2xl p-8" style="background: #f0f6ff; border: 1px solid #e2e8f0;">
+          <p class="font-bold mb-5" style="color: #1a3363;">Signs You Need Accurate AI</p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Your compliance data lives across systems that don't talk to each other
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Your team manually reformats data before every regulatory submission
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              You have compliance workflows that no off-the-shelf tool supports
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Your approval chains for HCP engagements are tracked in spreadsheets
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              You need a single compliance view across multiple business units or brands
+            </div>
+            <div class="flex items-start gap-3 text-sm text-gray-600">
+              <i class="fa-solid fa-circle-check mt-1" style="color: #00a896;"></i>
+              Enterprise platforms are overpriced for what you actually need
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CAPABILITIES
+  ══════════════════════════════════════ -->
+  <section id="capabilities" class="py-20" style="background: #f8fafc;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Powered by Accurate AI</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          Purpose-Built for <span>Pharma Compliance</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          This is the same AI that runs inside Accurate Spend — and every engagement starts with your requirements, not a template. Here's what we commonly build with Accurate AI for pharmaceutical and life sciences organizations.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #ede9fe; color: #7c3aed;">
+            <i class="fa-solid fa-display"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Custom Compliance Portals</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Bespoke web applications that centralize your compliance data, approvals, and reporting in one place — designed around the specific way your team actually works, not a generic SaaS workflow.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #ecfdf5; color: #059669;">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">AI-Powered Data Processing</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            AI models trained to extract, classify, and validate compliance-relevant data from contracts, invoices, expense reports, and event records — dramatically reducing manual data handling.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #eff6ff; color: #2563eb;">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">System Integrations</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Automated data pipelines connecting SAP, Concur, Salesforce, Veeva, and custom ERPs directly to your compliance reporting workflows — eliminating the manual export-transform-import cycle.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #fff3e0; color: #f59e0b;">
+            <i class="fa-solid fa-file-code"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Automated Reporting Tools</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            AI-assisted generation of CMS Open Payments files, state disclosure reports, and internal compliance summaries — pulling from your integrated data sources and applying jurisdiction-specific rules automatically.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #fef3f2; color: #dc2626;">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Analytics &amp; Dashboards</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Real-time compliance dashboards that give leadership visibility into spend trends, filing status, HCP engagement activity, and exception queues — built to your data model and KPIs.
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-icon" style="background: #e6f7f6; color: #00a896;">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2" style="color: #1a3363;">Workflow &amp; Approval Systems</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Configurable digital approval chains for HCP engagements, Fair Market Value reviews, speaker bureau activities, and other compliance touchpoints — with full audit trails for regulatory review.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       AI ADVANTAGE
+  ══════════════════════════════════════ -->
+  <section class="py-20" style="background: #0d1f3c;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag" style="background: rgba(0,168,150,0.15); color: #4dd6c8; border: 1px solid rgba(0,168,150,0.3);">
+            <i class="fa-solid fa-brain"></i> Inside Accurate AI
+          </div>
+        </div>
+        <h2 class="font-bold text-white mb-4" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+          Accurate AI Accelerates Compliance Work.<br/>
+          <span style="color: #00a896;">Domain Expertise Makes It Accurate.</span>
+        </h2>
+        <p class="mx-auto" style="color: rgba(255,255,255,0.7); max-width: 620px; line-height: 1.75;">
+          Accurate AI is embedded at every layer of the compliance data chain — inside Accurate Spend and in every custom system we build — but always guided by the regulatory knowledge to know what the output needs to look like.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="rounded-2xl p-6 text-center" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(0,168,150,0.2);">
+            <i class="fa-solid fa-file-magnifying-glass" style="color: #00a896; font-size: 1.2rem;"></i>
+          </div>
+          <h4 class="text-white font-bold mb-2 text-sm">Document Intelligence</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.825rem; line-height: 1.6;">
+            AI extraction of payment amounts, HCP identifiers, dates, and event types from contracts, invoices, and expense records — without manual keying.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 text-center" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(0,168,150,0.2);">
+            <i class="fa-solid fa-arrows-split-up-and-left" style="color: #00a896; font-size: 1.2rem;"></i>
+          </div>
+          <h4 class="text-white font-bold mb-2 text-sm">Intelligent Data Mapping</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.825rem; line-height: 1.6;">
+            AI models that learn your data structures and automatically map records to CMS categories, state thresholds, and your internal taxonomy — and improve over time.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 text-center" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(0,168,150,0.2);">
+            <i class="fa-solid fa-triangle-exclamation" style="color: #00a896; font-size: 1.2rem;"></i>
+          </div>
+          <h4 class="text-white font-bold mb-2 text-sm">Anomaly Detection</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.825rem; line-height: 1.6;">
+            Automated flagging of duplicate records, missing HCP identifiers, threshold breaches, and data inconsistencies before they become submission errors.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 text-center" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background: rgba(0,168,150,0.2);">
+            <i class="fa-solid fa-wand-magic-sparkles" style="color: #00a896; font-size: 1.2rem;"></i>
+          </div>
+          <h4 class="text-white font-bold mb-2 text-sm">Report Generation</h4>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.825rem; line-height: 1.6;">
+            AI-assisted assembly of compliant output files for CMS, state portals, and internal stakeholders — formatted to each jurisdiction's current requirements.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       HOW WE WORK
+  ══════════════════════════════════════ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-gears"></i> How We Work</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          From Requirements <span>to Running System</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          A structured engagement model that prioritizes compliance accuracy at every stage.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-clipboard-list" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Discovery &amp; Scoping</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">We learn your data environment, compliance obligations, and workflow requirements before writing a line of code</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-drafting-compass" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Architecture &amp; Design</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">System architecture is reviewed against your regulatory requirements — compliance accuracy is a design constraint, not an afterthought</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-code" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Build &amp; Validate</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">Iterative development with compliance validation at each milestone — tested against real data scenarios from your environment</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-circle">4</div>
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3" style="background: #e6f7f6;">
+            <i class="fa-solid fa-rocket" style="color: #00a896;"></i>
+          </div>
+          <h4 class="font-bold text-sm mb-1" style="color: #1a3363;">Deploy &amp; Support</h4>
+          <p class="text-gray-500 text-xs leading-relaxed">Hands-on deployment with knowledge transfer to your team, plus ongoing support as regulations and your business evolve</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       USE CASES
+  ══════════════════════════════════════ -->
+  <section class="py-20" style="background: #f0f6ff;">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <div class="flex justify-center mb-4">
+          <div class="section-tag"><i class="fa-solid fa-star"></i> Use Cases</div>
+        </div>
+        <h2 class="section-heading mb-4">
+          What Accurate AI <span>Has Built for Pharma</span>
+        </h2>
+        <p class="section-sub mx-auto">
+          Representative examples of the systems Accurate AI powers for pharmaceutical and life sciences organizations — inside Accurate Spend and beyond it.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.1);">
+              <i class="fa-solid fa-database" style="color: #00a896;"></i>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: #1a3363;">Spend-to-Submission Pipeline</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Automated pipeline connecting Concur and Salesforce spend data to CMS Open Payments format — AI-powered HCP matching, category classification, and submission-ready file generation, replacing weeks of manual Excel work.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.1);">
+              <i class="fa-solid fa-file-contract" style="color: #00a896;"></i>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: #1a3363;">AI Contract &amp; Invoice Extraction</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                AI system that reads HCP consulting agreements and speaker program invoices, extracts payment amounts, dates, and service categories, and routes records into the compliance tracking system — with human review for edge cases.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.1);">
+              <i class="fa-solid fa-map-location-dot" style="color: #00a896;"></i>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: #1a3363;">Multi-State Filing Automation</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Custom system that takes a single consolidated spend dataset and generates jurisdiction-specific disclosure files for each state obligation — automatically applying each state's thresholds, categories, and format requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl p-7" style="background: #fff; border: 1px solid #e2e8f0;">
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,168,150,0.1);">
+              <i class="fa-solid fa-user-check" style="color: #00a896;"></i>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2" style="color: #1a3363;">HCP Engagement Approval Portal</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">
+                Configurable digital workflow for HCP engagement requests — capturing business justification, FMV rates, debarment checks, and multi-level approvals, with a full audit trail exportable for regulatory review.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════ -->
+  <section class="cta-banner py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-white font-black mb-4" style="font-size: clamp(1.8rem, 4vw, 2.75rem);">
+        Have a Compliance Problem That Needs AI?
+      </h2>
+      <p class="text-lg mb-10" style="color: rgba(255,255,255,0.8);">
+        Book a discovery call and we'll assess your environment, define the scope, and show you exactly how Accurate AI would solve it — no commitment required.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="btn-primary text-base">
+          <i class="fa-solid fa-calendar-check"></i> Book a Discovery Call
+        </a>
+        <a href="solutions-accurate-spend.html" class="btn-outline text-base">
+          See Accurate Spend
+        </a>
+      </div>
+      <p class="mt-8 text-sm" style="color: rgba(255,255,255,0.5);">
+        No commitment required &nbsp;·&nbsp; Powered by Accurate AI &nbsp;·&nbsp; Pharma domain expertise included
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+
+        <div class="md:col-span-2">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: #00a896;">
+              <i class="fa-solid fa-chart-line text-white text-base"></i>
+            </div>
+            <span class="text-xl font-bold text-white tracking-tight">
+              Accurate<span style="color: #00a896;">Spend</span>
+            </span>
+          </a>
+          <p style="color: rgba(255,255,255,0.55); font-size: 0.875rem; line-height: 1.7; max-width: 320px;">
+            Expert-led federal and state reporting for pharmaceutical manufacturers — compliant, cost-effective, and fully managed.
+          </p>
+          <div class="mt-5 space-y-2" style="color: rgba(255,255,255,0.55); font-size: 0.8rem; line-height: 1.6;">
+            <p class="flex items-center gap-2.5"><i class="fa-solid fa-phone" style="color:#00a896;"></i> <a href="tel:+17342391680" class="hover:text-white transition-colors">(734) 239-1680</a> <span style="color:rgba(255,255,255,0.35);">· Sales &amp; Support</span></p>
+            <p class="flex items-center gap-2.5"><i class="fa-solid fa-envelope" style="color:#00a896;"></i> <a href="mailto:Sales@accuratespendhq.com" class="hover:text-white transition-colors">Sales@accuratespendhq.com</a></p>
+          </div>
+          <div class="flex gap-3 mt-5">
+            <a href="contact.html" class="btn-primary text-sm py-2.5 px-5">
+              <i class="fa-solid fa-calendar-check"></i> Book a Demo
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Product &amp; Services</p>
+          <a href="solutions-accurate-spend.html" class="footer-link">Accurate Spend (Federal Reporting)</a>
+          <a href="solutions-hcp-engage.html" class="footer-link">HCP Engage</a>
+          <a href="services-state-reporting.html" class="footer-link">State Reporting</a>
+          <a href="accurate-ai.html" class="footer-link">Accurate AI</a>
+        </div>
+
+        <div>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Company</p>
+          <a href="index.html#expertise" class="footer-link">Expertise</a>
+          <a href="index.html#about"     class="footer-link">About</a>
+          <a href="contact.html"         class="footer-link">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="border-t pt-6 flex flex-col md:flex-row items-center justify-between gap-4" style="border-color: rgba(255,255,255,0.1);">
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">
+          &copy; 2026 Accurate Spend. All rights reserved.
+        </p>
+        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">
+          Federal CMS Open Payments &amp; State Transparency Reporting &nbsp;·&nbsp; Sunshine Act Compliance
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -67,7 +67,28 @@
               </a>
             </div>
           </div>
-          <a href="services-state-reporting.html" class="nav-link active" data-page="services-state-reporting.html">Services</a>
+          <!-- Services Dropdown -->
+          <div class="relative">
+            <button id="services-trigger" class="nav-link active flex items-center gap-1.5 bg-transparent border-0 cursor-pointer">
+              Services <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            </button>
+            <div id="services-dropdown" class="dropdown-menu">
+              <a href="services-state-reporting.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="item-text">
+                  <strong>State Reporting</strong>
+                  <span>Multi-state transparency compliance</span>
+                </div>
+              </a>
+              <a href="accurate-ai.html" class="dropdown-item">
+                <div class="icon-wrap"><i class="fa-solid fa-brain"></i></div>
+                <div class="item-text">
+                  <strong>Accurate AI</strong>
+                  <span>Solving compliance challenges</span>
+                </div>
+              </a>
+            </div>
+          </div>
           <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
         </div>
 
@@ -83,11 +104,25 @@
       </div>
     </div>
     <div id="mobile-menu">
-      <a href="index.html"                    class="mobile-nav-link">Home</a>
-      <a href="solutions-accurate-spend.html" class="mobile-nav-link">Solutions — Accurate Spend</a>
-      <a href="solutions-hcp-engage.html"     class="mobile-nav-link">Solutions — HCP Engage</a>
-      <a href="services-state-reporting.html" class="mobile-nav-link">Services — State Reporting</a>
-      <a href="contact.html"                  class="mobile-nav-link">Contact</a>
+      <a href="index.html"                             class="mobile-nav-link">Home</a>
+
+      <button class="mobile-nav-toggle" data-target="mobile-solutions">
+        Solutions <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div id="mobile-solutions" class="mobile-submenu">
+        <a href="solutions-accurate-spend.html" class="mobile-nav-sublink">Accurate Spend</a>
+        <a href="solutions-hcp-engage.html"     class="mobile-nav-sublink">HCP Engage</a>
+      </div>
+
+      <button class="mobile-nav-toggle" data-target="mobile-services">
+        Services <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div id="mobile-services" class="mobile-submenu">
+        <a href="services-state-reporting.html" class="mobile-nav-sublink">State Reporting</a>
+        <a href="accurate-ai.html"              class="mobile-nav-sublink">Accurate AI</a>
+      </div>
+
+      <a href="contact.html"                           class="mobile-nav-link">Contact</a>
       <div class="pt-3">
         <a href="contact.html" class="btn-primary w-full justify-center">
           <i class="fa-solid fa-calendar-check"></i> Book a Demo
@@ -474,7 +509,6 @@
             Expert-led federal and state reporting for pharmaceutical manufacturers — compliant, cost-effective, and fully managed.
           </p>
           <div class="mt-5 space-y-2" style="color: rgba(255,255,255,0.55); font-size: 0.8rem; line-height: 1.6;">
-            <p class="flex items-start gap-2.5"><i class="fa-solid fa-location-dot mt-0.5" style="color:#00a896;"></i> 39649 Dorchester Circle, Canton, MI 48188</p>
             <p class="flex items-center gap-2.5"><i class="fa-solid fa-phone" style="color:#00a896;"></i> <a href="tel:+17342391680" class="hover:text-white transition-colors">(734) 239-1680</a> <span style="color:rgba(255,255,255,0.35);">· Sales &amp; Support</span></p>
             <p class="flex items-center gap-2.5"><i class="fa-solid fa-envelope" style="color:#00a896;"></i> <a href="mailto:Sales@accuratespendhq.com" class="hover:text-white transition-colors">Sales@accuratespendhq.com</a></p>
           </div>
@@ -486,19 +520,18 @@
         </div>
 
         <div>
-          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Solutions &amp; Services</p>
-          <a href="solutions-accurate-spend.html" class="footer-link">Accurate Spend — Federal Reporting</a>
-          <a href="services-state-reporting.html" class="footer-link">State Reporting</a>
-          <a href="solutions-hcp-engage.html" class="footer-link">HCP Engage</a>
+          <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Product &amp; Services</p>
+          <a href="solutions-accurate-spend.html"          class="footer-link">Accurate Spend (Federal Reporting)</a>
+          <a href="solutions-hcp-engage.html"              class="footer-link">HCP Engage</a>
+          <a href="services-state-reporting.html"          class="footer-link">State Reporting</a>
+          <a href="accurate-ai.html"   class="footer-link">Accurate AI</a>
         </div>
 
         <div>
           <p class="text-white font-semibold text-sm mb-4 uppercase tracking-wide">Company</p>
-          <a href="services-state-reporting.html"  class="footer-link">Services</a>
           <a href="index.html#expertise" class="footer-link">Expertise</a>
           <a href="index.html#about"     class="footer-link">About</a>
-          <a href="contact.html"         class="footer-link">Contact</a>
-          <a href="contact.html"         class="footer-link">Book a Demo</a>
+          <a href="contact.html"         class="footer-link">Contact Us</a>
         </div>
       </div>
 

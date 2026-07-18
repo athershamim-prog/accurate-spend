@@ -447,6 +447,39 @@ footer {
   font-size: 0.95rem;
 }
 .mobile-nav-link:hover { color: var(--teal); }
+.mobile-nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.mobile-nav-toggle:hover { color: var(--teal); }
+.mobile-nav-toggle i { font-size: 0.8rem; opacity: 0.7; transition: transform 0.2s; }
+.mobile-nav-toggle.open i { transform: rotate(180deg); }
+.mobile-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  background: rgba(255,255,255,0.03);
+}
+.mobile-submenu.open { max-height: 240px; }
+.mobile-nav-sublink {
+  display: block;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.9rem;
+  padding: 10px 8px 10px 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  text-decoration: none;
+}
+.mobile-nav-sublink:hover { color: var(--teal); }
 
 /* ── Animations ── */
 @keyframes fadeUp {
